@@ -30,6 +30,8 @@ html, body, #root{
 
 .main .right{
   background-color: rgb(85, 82, 82);
+  padding: 1rem 2rem;
+  overflow: auto;
 }
 
 .main .left .review-button{
@@ -53,7 +55,63 @@ html, body, #root{
   border-radius: 0.7rem; 
 }
 
-/* .main .left .review-button :hover {
-  opacity: 0.5;
-  
-} */
+.review-button {
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  background: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.review-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.1), transparent 50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.review-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.review-button:hover::before {
+  opacity: 1;
+}
+
+/* loading screen*/
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 5px solid rgba(0, 0, 0, 0.1);
+  border-top-color: #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
