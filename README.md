@@ -52,6 +52,4 @@ The **AI Code Generator** is a web application that allows users to input code s
 ## Contributing
 Feel free to fork this repository and submit pull requests with improvements!
 
-## License
-This project is licensed under the MIT License.
 
