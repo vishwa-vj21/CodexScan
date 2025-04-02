@@ -9,7 +9,7 @@ import rehypeHighlight from "rehype-highlight"
 import "highlight.js/styles/github-dark.css"
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0)
   const [code, setCode] = useState('')
   const [review, setReview] = useState('')
   const [loading, setLoading] = useState(false)
