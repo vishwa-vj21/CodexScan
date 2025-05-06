@@ -22,10 +22,26 @@ The **AI Code Generator** is a web application that allows users to input code s
    cd ai-code-generator
    ```
 2. Install dependencies:
-   ```bash
-   npm install
-   ```
+   # Frontend
+cd frontend
+npm install
+
+# Backend
+cd ../backend
+npm install
+
 3. Start the development server:
+   Running the App:
+   Start Backend (Express):
+
+   cd backend
+npm start
+
+Start Frontend (React + Vite):
+
+cd frontend
+npm run dev
+
    ```bash
    npm start
    ```
