@@ -1,40 +1,43 @@
-*{
+* {
   margin: 0;
   padding: 0;
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
-html, body, #root{
+html,
+body,
+#root {
   height: 100%;
   width: 100%;
 }
 
-.main{
+.main {
   width: 100%;
-  height: 100%;
+  height: 90%;
   padding: 1rem;
   display: flex;
   gap: 1.5rem;
 }
 
-.main .left, .main .right {
+.main .left,
+.main .right {
   /* height: 100%; */
   flex-basis: 50%;
   border-radius: 0.5rem;
 }
 
-.main .left{
+.main .left {
   background-color: black;
   position: relative;
 }
 
-.main .right{
+.main .right {
   background-color: rgb(85, 82, 82);
   padding: 1rem 2rem;
   overflow: auto;
 }
 
-.main .left .review-button{
+.main .left .review-button {
   position: absolute;
   bottom: 1rem;
   right: 1rem;
@@ -47,12 +50,13 @@ html, body, #root{
   cursor: pointer;
 }
 
-.left .code, .code pre{
+.left .code,
+.code pre {
   height: 100%;
   width: 100%;
   margin: 0;
   background-color: rgb(22, 21, 21);
-  border-radius: 0.7rem; 
+  border-radius: 0.7rem;
 }
 
 .review-button {
@@ -112,6 +116,29 @@ html, body, #root{
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.app-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.heading-title {
+  margin-left: 20px;
+  /* text-align: center; */
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  background-color: #242424;
+  padding: 1rem 0;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid #444;
 }
