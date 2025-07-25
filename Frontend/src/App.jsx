@@ -20,12 +20,9 @@ function App() {
       return;
     }
     setLoading(true);
-    const response = await axios.post(
-      "https://codexscan.onrender.com/ai/get-review",
-      {
-        code,
-      }
-    );
+
+    const backendUrl = import.meta.env.VITE_BACKEND_URL;
+    const response = await axios.post(`${backendUrl}/ai/get-review`, { code });
     setReview(response.data);
     setLoading(false);
   }
